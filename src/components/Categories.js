@@ -17,8 +17,10 @@ class Categories extends Component
         
         return(
             <div>Categories
-                <ol>
-                    {categories_lst.map((e,i)=><li key={i}>{e}</li>)}
+                <ol className="nostylelst">
+                    {categories_lst.map((k,i)=><li key={i}>
+                    <button onClick={e=>this.props.setDisplayCategory(k)} >{k}</button>
+                    </li>)}
                 </ol>
             </div>
         );
